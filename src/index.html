@@ -1,15 +1,94 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Form</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" method="post">
 </head>
+
 <body>
-  <h1>HTML Form</h1>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application">
+    <div class="border"> <span>Personal information </span> <br>
+      <label>
+        Surname: <input type="user" name="Surname" required autocomplete="off"> <br>
+      </label>
+      <label>
+        Name: <input type="user" name="Name" autocomplete="off" required>
+        <br>
+      </label>
+      <label>
+        How old are You? <input type="number" name="number" value="12" min="10" max="70"> <br>
+      </label>
+      <label>
+        Full date of birth: <input type="date" name="date">
+      </label> <br>
+      <label>
+        I accept the term of the agreement
+        <input type="checkbox" id="agreement" name="agreement">
+      </label>
+    </div>
+    <div class="border"> <span> Registration </span> <br>
+      <label>
+        E-mail: <input type="text" name="E-mail" value="email@example.com" size="18" required autocomplete="off"> <br>
+      </label>
+      <label>
+        Password: <input type="password" id="pass" name="password" minlength="8" maxlength="10" required
+          autocomplete="off"> <br>
+      </label>
+    </div>
+    <div class="border">An interesting fact about you!
+      <br>
+      Do you love cats?
+      <label for="Yes">
+        <input type="radio" name="drone" value="yes"> Yes
+      </label>
+      <label for="No">
+        <input type="radio" name="drone" value="no"> No
+      </label> <br>
+      <label>
+        Whats is your favorite colors? <input type="color" name="color" value="black">
+      </label> <br>
+      <label>
+        What time do you go to bad? <input type="datetime-local" name="datetime">
+
+      </label> <br>
+      <label>
+        Whats are your favorite brands of cars?
+        <select multiple size="3">
+          <option> BMW</option>
+          <option> Aydi </option>
+          <option> Lada </option>
+        </select>
+      </label> <br>
+      <label>
+        How do you rate our work? <input type="range" id="rate" name="rate" value="0" step="10" min="0" max="100">
+      </label> <br>
+    </div>
+    <div class="border">Additional info: <br>
+      <label>
+        Comments: <textarea name="Comments" autocomplete="off" cols="12" rows="2"> </textarea> <br>
+      </label>
+      <br>
+      <label>
+        Would recommend us?
+        <select id="pet-select" checked>
+          <option value="yes">Yes</option>
+          <option value="ok">Ok</option>
+          <option value="ok">Sure</option>
+        </select>
+      </label>
+      <br>
+    </div>
+    <br>
+    <label>
+      <input type="submit" value="Submit"><br>
+    </label>
+  </form>
   <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>
